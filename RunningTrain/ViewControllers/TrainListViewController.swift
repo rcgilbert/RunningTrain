@@ -24,6 +24,18 @@ class TrainListViewController: UITableViewController, UISplitViewControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tableView.registerNib(UINib(nibName: "TrainCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "trainCell")
+        self.tableView.estimatedRowHeight = 44.0 //Kip: This MUST be set for self-sizing cells to work reliably
+        for i in 0..10
+        {
+            var name = "Shit train fart taint \(i)"
+            if arc4random() % 3 == 0
+            {
+                name = "\(name) qwertyuiop asdka ksdlkajs a asl penis alkas"
+            }
+            let buttTrain = Train(name: name, routes: [])
+            trains.append(buttTrain)
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -46,16 +58,29 @@ class TrainListViewController: UITableViewController, UISplitViewControllerDeleg
         return trains.count
     }
 
-    /*
-    override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell?
+    {
+        if let cell : TrainCell = tableView?.dequeueReusableCellWithIdentifier("trainCell") as? TrainCell
+        {
+            if let thisTrain = trainForIndexPath(indexPath)
+            {
+                cell.updateWithTrain(thisTrain)
+            }
+            return cell
+        }
+        return nil;
     }
-    */
 
+
+    func trainForIndexPath(indexPath:NSIndexPath) -> Train?
+    {
+        if trains.count >= indexPath.row
+        {
+            return trains[indexPath.row]
+        }
+        return nil;
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView?, canEditRowAtIndexPath indexPath: NSIndexPath?) -> Bool {
@@ -64,17 +89,22 @@ class TrainListViewController: UITableViewController, UISplitViewControllerDeleg
     }
     */
 
-    /*
+    
+    
     // Override to support editing the table view.
-    override func tableView(tableView: UITableView?, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath?) {
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath?) {
         if editingStyle == .Delete {
             // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            if let idxp = indexPath
+            {
+                trains.removeAtIndex(idxp.row)
+                tableView.deleteRowsAtIndexPaths([idxp], withRowAnimation: UITableViewRowAnimation.Fade)
+            }
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
