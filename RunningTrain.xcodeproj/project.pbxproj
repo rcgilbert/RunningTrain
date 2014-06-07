@@ -32,6 +32,7 @@
 /* Begin PBXFileReference section */
 		3728A5701942B101009FD880 /* TrainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainCell.swift; path = Views/TrainCell.swift; sourceTree = "<group>"; };
 		3728A5711942B101009FD880 /* TrainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TrainCell.xib; path = Views/TrainCell.xib; sourceTree = "<group>"; };
+		376DFF8A19439E1500961769 /* RunningTrain-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunningTrain-Bridging-Header.h"; sourceTree = "<group>"; };
 		37F315701942A32C0023FA43 /* TrainListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainListViewController.swift; path = ViewControllers/TrainListViewController.swift; sourceTree = "<group>"; };
 		7F0D80F119412311008F0AC9 /* Train.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Train.swift; path = Models/Train.swift; sourceTree = "<group>"; };
 		7F125B57194128D9009089D4 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Route.swift; path = Models/Route.swift; sourceTree = "<group>"; };
@@ -138,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				7F31C6201940D0DA00BF0288 /* Info.plist */,
+				376DFF8A19439E1500961769 /* RunningTrain-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -413,9 +415,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RunningTrain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunningTrain/RunningTrain-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -425,9 +430,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RunningTrain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunningTrain/RunningTrain-Bridging-Header.h";
 			};
 			name = Release;
 		};

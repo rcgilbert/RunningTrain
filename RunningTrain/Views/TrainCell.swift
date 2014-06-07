@@ -25,7 +25,6 @@ class TrainCell: UITableViewCell {
     
     func updateWithTrain(train:Train)
     {
-        println(train)
         trainNameLabel.text = train.name;
     }
     

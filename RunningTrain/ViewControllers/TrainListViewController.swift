@@ -48,6 +48,42 @@ class TrainListViewController: UITableViewController, UISplitViewControllerDeleg
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        getTestData()
+    }
+    
+    func getTestData ()
+    {
+        let szURL = "http://www3.septa.org/hackathon/TrainView/"
+        let url = NSURL.URLWithString(szURL)
+        let request = NSURLRequest(URL: url)
+        
+        let operation = AFHTTPRequestOperation(request: request)
+        operation.responseSerializer = ((AFJSONResponseSerializer(readingOptions: NSJSONReadingOptions.AllowFragments)) as AFHTTPResponseSerializer)
+
+        operation.setCompletionBlockWithSuccess({(operation:AFHTTPRequestOperation!, responseObject: AnyObject!) -> Void in
+            self.trains.removeAll(keepCapacity: false)
+            if let remoteTrains = responseObject as? NSArray
+            {
+                for poopTrain : AnyObject in remoteTrains
+                {
+                    let trainDic = poopTrain as NSDictionary
+                    let szService = trainDic["service"] as NSString
+                    let szTrainNo = trainDic["trainno"] as NSString
+                    let szSource = trainDic["SOURCE"] as NSString
+                    let szDest = trainDic ["dest"] as NSString
+                    let szFullName = "\(szService) train \(szTrainNo) from \(szSource) to \(szDest)";
+                    let tempTrain = Train(name: szFullName, routes: [])
+                    self.trains.append(tempTrain)
+                }
+            }
+            self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Automatic)
+            }, failure: nil)
+        
+        operation.start()
+    }
     // #pragma mark - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
