@@ -4,6 +4,9 @@
 //
 //  http://511.org/docs/RTT%20API%20V2.0%20Reference.pdf
 //  d4835430-1486-4fe8-bd61-64e80532e39e
+//  http://www.realtimetrains.co.uk/api/pull/serviceinfo
+//  http://www3.septa.org/hackathon/TrainView/
+//  https://developer.transportapi.com/documentation/train-information#station_departures_live
 //  Created by Ryan Gilbert on 6/5/14.
 //  Copyright (c) 2014 Ryan Gilbert. All rights reserved.
 //
@@ -20,6 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         // Override point for customization after application launch.
         self.window!.backgroundColor = UIColor.whiteColor()
+        
+        let trainsVC = TrainListViewController(style: UITableViewStyle.Plain)
+        let navVC = UINavigationController(rootViewController: trainsVC)
+        
+        let splitVC = UISplitViewController()
+        splitVC.viewControllers = [navVC]
+        if self.window!.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.Regular
+        {
+            splitVC.viewControllers = [navVC, UINavigationController()]
+        }
+        self.window!.rootViewController = splitVC
         self.window!.makeKeyAndVisible()
         return true
     }

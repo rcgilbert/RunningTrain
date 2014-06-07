@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37F315711942A32C0023FA43 /* TrainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F315701942A32C0023FA43 /* TrainListViewController.swift */; };
 		5ED56B54E8C74430A14666F6 /* libPods-RunningTrain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBFE2FA6CE34AC9AF57311A /* libPods-RunningTrain.a */; };
 		7F0D80F219412311008F0AC9 /* Train.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D80F119412311008F0AC9 /* Train.swift */; };
 		7F125B58194128D9009089D4 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F125B57194128D9009089D4 /* Route.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37F315701942A32C0023FA43 /* TrainListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainListViewController.swift; path = ViewControllers/TrainListViewController.swift; sourceTree = "<group>"; };
 		7F0D80F119412311008F0AC9 /* Train.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Train.swift; path = Models/Train.swift; sourceTree = "<group>"; };
 		7F125B57194128D9009089D4 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Route.swift; path = Models/Route.swift; sourceTree = "<group>"; };
 		7F125B59194128FA009089D4 /* TrainStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainStop.swift; path = Models/TrainStop.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		7F0D80EF194122C6008F0AC9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				37F315701942A32C0023FA43 /* TrainListViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			files = (
 				7F125B58194128D9009089D4 /* Route.swift in Sources */,
 				7F0D80F219412311008F0AC9 /* Train.swift in Sources */,
+				37F315711942A32C0023FA43 /* TrainListViewController.swift in Sources */,
 				7F125B5A194128FA009089D4 /* TrainStop.swift in Sources */,
 				7F31C6221940D0DA00BF0288 /* AppDelegate.swift in Sources */,
 			);
