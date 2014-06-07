@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let splitVC = UISplitViewController()
         splitVC.viewControllers = [navVC]
+        splitVC.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
         if self.window!.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.Regular
         {
             splitVC.viewControllers = [navVC, UINavigationController()]

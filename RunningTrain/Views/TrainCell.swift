@@ -11,6 +11,7 @@ import UIKit
 class TrainCell: UITableViewCell {
 
     @IBOutlet var trainNameLabel : UILabel
+    @IBOutlet var timeLabel : UILabel
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +27,15 @@ class TrainCell: UITableViewCell {
     func updateWithTrain(train:Train)
     {
         trainNameLabel.text = train.name;
+        switch train.status
+        {
+            case .OnTime:
+                self.timeLabel.text = ""
+            case .Early(let earlyBy):
+                self.timeLabel.text = "Early by \(earlyBy) minutes"
+            case .Late(let lateBy):
+                self.timeLabel.text = "Late by \(lateBy) minutes"
+        }
     }
     
 }
