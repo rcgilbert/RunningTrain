@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3728A5721942B101009FD880 /* TrainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3728A5701942B101009FD880 /* TrainCell.swift */; };
+		3728A5731942B101009FD880 /* TrainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3728A5711942B101009FD880 /* TrainCell.xib */; };
+		37F315711942A32C0023FA43 /* TrainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F315701942A32C0023FA43 /* TrainListViewController.swift */; };
 		5ED56B54E8C74430A14666F6 /* libPods-RunningTrain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBFE2FA6CE34AC9AF57311A /* libPods-RunningTrain.a */; };
 		7F0D80F219412311008F0AC9 /* Train.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D80F119412311008F0AC9 /* Train.swift */; };
 		7F125B58194128D9009089D4 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F125B57194128D9009089D4 /* Route.swift */; };
@@ -31,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3728A5701942B101009FD880 /* TrainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainCell.swift; path = Views/TrainCell.swift; sourceTree = "<group>"; };
+		3728A5711942B101009FD880 /* TrainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TrainCell.xib; path = Views/TrainCell.xib; sourceTree = "<group>"; };
+		376DFF8A19439E1500961769 /* RunningTrain-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunningTrain-Bridging-Header.h"; sourceTree = "<group>"; };
+		37F315701942A32C0023FA43 /* TrainListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainListViewController.swift; path = ViewControllers/TrainListViewController.swift; sourceTree = "<group>"; };
 		7F0D80F119412311008F0AC9 /* Train.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Train.swift; path = Models/Train.swift; sourceTree = "<group>"; };
 		7F125B57194128D9009089D4 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Route.swift; path = Models/Route.swift; sourceTree = "<group>"; };
 		7F125B59194128FA009089D4 /* TrainStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainStop.swift; path = Models/TrainStop.swift; sourceTree = "<group>"; };
@@ -92,6 +99,7 @@
 				7FA1FACA19413260004CC61E /* MainViewController.xib */,
 				7FA1FACD194135F7004CC61E /* TrainListTableViewController.swift */,
 				7FA1FACF1941391C004CC61E /* TrainListTableViewController.xib */,
+				37F315701942A32C0023FA43 /* TrainListViewController.swift */,e
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -99,6 +107,8 @@
 		7F0D80F0194122CE008F0AC9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3728A5701942B101009FD880 /* TrainCell.swift */,
+				3728A5711942B101009FD880 /* TrainCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -141,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				7F31C6201940D0DA00BF0288 /* Info.plist */,
+				376DFF8A19439E1500961769 /* RunningTrain-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -251,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3728A5731942B101009FD880 /* TrainCell.xib in Resources */,
 				7F31C6241940D0DA00BF0288 /* Images.xcassets in Resources */,
 				7FA1FAD01941391C004CC61E /* TrainListTableViewController.xib in Resources */,
 				7FA1FACC19413260004CC61E /* MainViewController.xib in Resources */,
@@ -306,6 +318,8 @@
 			files = (
 				7F125B58194128D9009089D4 /* Route.swift in Sources */,
 				7F0D80F219412311008F0AC9 /* Train.swift in Sources */,
+				3728A5721942B101009FD880 /* TrainCell.swift in Sources */,
+				37F315711942A32C0023FA43 /* TrainListViewController.swift in Sources */,
 				7F125B5A194128FA009089D4 /* TrainStop.swift in Sources */,
 				7F31C6221940D0DA00BF0288 /* AppDelegate.swift in Sources */,
 				7FA1FACE194135F7004CC61E /* TrainListTableViewController.swift in Sources */,
@@ -417,9 +431,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RunningTrain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunningTrain/RunningTrain-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -429,9 +446,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RunningTrain/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RunningTrain/RunningTrain-Bridging-Header.h";
 			};
 			name = Release;
 		};

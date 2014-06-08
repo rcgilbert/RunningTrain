@@ -8,8 +8,15 @@
 
 import Foundation
 
+enum TimeStatus {
+    case OnTime
+    case Early(Int)
+    case Late(Int)
+}
+
 class Train : NSObject {
     let name : String
+    var status : TimeStatus = TimeStatus.OnTime;
     var routes : Route[]
     var currentRoute : Route? {
         return routes[routes.startIndex]
