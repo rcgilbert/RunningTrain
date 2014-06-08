@@ -17,10 +17,6 @@
 		7F31C6221940D0DA00BF0288 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F31C6211940D0DA00BF0288 /* AppDelegate.swift */; };
 		7F31C6241940D0DA00BF0288 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F31C6231940D0DA00BF0288 /* Images.xcassets */; };
 		7F31C6301940D0DA00BF0288 /* RunningTrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F31C62F1940D0DA00BF0288 /* RunningTrainTests.swift */; };
-		7FA1FACB19413260004CC61E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1FAC919413260004CC61E /* MainViewController.swift */; };
-		7FA1FACC19413260004CC61E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1FACA19413260004CC61E /* MainViewController.xib */; };
-		7FA1FACE194135F7004CC61E /* TrainListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1FACD194135F7004CC61E /* TrainListTableViewController.swift */; };
-		7FA1FAD01941391C004CC61E /* TrainListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FA1FACF1941391C004CC61E /* TrainListTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +44,6 @@
 		7F31C6291940D0DA00BF0288 /* RunningTrainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunningTrainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F31C62E1940D0DA00BF0288 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F31C62F1940D0DA00BF0288 /* RunningTrainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTrainTests.swift; sourceTree = "<group>"; };
-		7FA1FAC919413260004CC61E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ViewControllers/MainViewController.swift; sourceTree = "<group>"; };
-		7FA1FACA19413260004CC61E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = ViewControllers/MainViewController.xib; sourceTree = "<group>"; };
-		7FA1FACD194135F7004CC61E /* TrainListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainListTableViewController.swift; path = ViewControllers/TrainListTableViewController.swift; sourceTree = "<group>"; };
-		7FA1FACF1941391C004CC61E /* TrainListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TrainListTableViewController.xib; path = ViewControllers/TrainListTableViewController.xib; sourceTree = "<group>"; };
 		DCBFE2FA6CE34AC9AF57311A /* libPods-RunningTrain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RunningTrain.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9AA1489AFE4E879C4B0E7D /* Pods-RunningTrain.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunningTrain.xcconfig"; path = "Pods/Pods-RunningTrain.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,11 +87,7 @@
 		7F0D80EF194122C6008F0AC9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7FA1FAC919413260004CC61E /* MainViewController.swift */,
-				7FA1FACA19413260004CC61E /* MainViewController.xib */,
-				7FA1FACD194135F7004CC61E /* TrainListTableViewController.swift */,
-				7FA1FACF1941391C004CC61E /* TrainListTableViewController.xib */,
-				37F315701942A32C0023FA43 /* TrainListViewController.swift */,e
+				37F315701942A32C0023FA43 /* TrainListViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -264,8 +252,6 @@
 			files = (
 				3728A5731942B101009FD880 /* TrainCell.xib in Resources */,
 				7F31C6241940D0DA00BF0288 /* Images.xcassets in Resources */,
-				7FA1FAD01941391C004CC61E /* TrainListTableViewController.xib in Resources */,
-				7FA1FACC19413260004CC61E /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,8 +308,6 @@
 				37F315711942A32C0023FA43 /* TrainListViewController.swift in Sources */,
 				7F125B5A194128FA009089D4 /* TrainStop.swift in Sources */,
 				7F31C6221940D0DA00BF0288 /* AppDelegate.swift in Sources */,
-				7FA1FACE194135F7004CC61E /* TrainListTableViewController.swift in Sources */,
-				7FA1FACB19413260004CC61E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

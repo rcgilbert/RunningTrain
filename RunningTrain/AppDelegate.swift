@@ -22,18 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-
         // Override point for customization after application launch.
-        /*let mainNavigationController = UINavigationController()
-        mainNavigationController.pushViewController(MainViewController(nibName: "MainViewController", bundle: nil), animated: false)
-        self.window!.rootViewController = mainNavigationController*/
-        self.window!.rootViewController = MainViewController(nibName: "MainViewController", bundle: nil)
+        self.window!.backgroundColor = UIColor.whiteColor()
 
-        /*self.window!.backgroundColor = UIColor.whiteColor()
-        
         let trainsVC = TrainListViewController(style: UITableViewStyle.Plain)
         let navVC = UINavigationController(rootViewController: trainsVC)
-        
+
         let splitVC = UISplitViewController()
         splitVC.viewControllers = [navVC]
         splitVC.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
@@ -41,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         {
             splitVC.viewControllers = [navVC, UINavigationController()]
         }
-        self.window!.rootViewController = splitVC*/
+        self.window!.rootViewController = splitVC
         self.window!.makeKeyAndVisible()
         return true
     }
