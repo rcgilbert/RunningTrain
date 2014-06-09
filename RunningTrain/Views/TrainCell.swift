@@ -30,7 +30,7 @@ class TrainCell: UITableViewCell {
         switch train.status
         {
             case .OnTime:
-                self.timeLabel.text = ""
+                self.timeLabel.text = nil
             case .Early(let earlyBy):
                 self.timeLabel.text = "Early by \(earlyBy) minutes"
             case .Late(let lateBy):

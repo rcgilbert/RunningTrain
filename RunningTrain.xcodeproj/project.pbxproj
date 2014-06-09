@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		371136581946220C004A543C /* TrainOperationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371136571946220C004A543C /* TrainOperationController.swift */; };
 		3728A5721942B101009FD880 /* TrainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3728A5701942B101009FD880 /* TrainCell.swift */; };
 		3728A5731942B101009FD880 /* TrainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3728A5711942B101009FD880 /* TrainCell.xib */; };
 		37F315711942A32C0023FA43 /* TrainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F315701942A32C0023FA43 /* TrainListViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		371136571946220C004A543C /* TrainOperationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainOperationController.swift; path = API/TrainOperationController.swift; sourceTree = "<group>"; };
 		3728A5701942B101009FD880 /* TrainCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainCell.swift; path = Views/TrainCell.swift; sourceTree = "<group>"; };
 		3728A5711942B101009FD880 /* TrainCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TrainCell.xib; path = Views/TrainCell.xib; sourceTree = "<group>"; };
 		376DFF8A19439E1500961769 /* RunningTrain-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RunningTrain-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		7F0D80ED194122AF008F0AC9 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				371136571946220C004A543C /* TrainOperationController.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				7F125B58194128D9009089D4 /* Route.swift in Sources */,
 				7F0D80F219412311008F0AC9 /* Train.swift in Sources */,
 				3728A5721942B101009FD880 /* TrainCell.swift in Sources */,
+				371136581946220C004A543C /* TrainOperationController.swift in Sources */,
 				37F315711942A32C0023FA43 /* TrainListViewController.swift in Sources */,
 				7F125B5A194128FA009089D4 /* TrainStop.swift in Sources */,
 				7F31C6221940D0DA00BF0288 /* AppDelegate.swift in Sources */,

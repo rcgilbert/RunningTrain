@@ -53,15 +53,8 @@ class TrainListViewController: UITableViewController, UISplitViewControllerDeleg
     }
     
     func getTestData ()
-    {
-        let szURL = "http://www3.septa.org/hackathon/TrainView/"
-        let url = NSURL.URLWithString(szURL)
-        let request = NSURLRequest(URL: url)
-        
-        let operation = AFHTTPRequestOperation(request: request)
-        operation.responseSerializer = ((AFJSONResponseSerializer(readingOptions: NSJSONReadingOptions.AllowFragments)) as AFHTTPResponseSerializer)
-
-        operation.setCompletionBlockWithSuccess({(operation:AFHTTPRequestOperation!, responseObject: AnyObject!) -> Void in
+    {        
+        TrainOperationController.sharedController().septaClient.generateOperation("TrainView", params:nil, success:{(operation:AFHTTPRequestOperation!, responseObject: AnyObject!) -> Void in
             self.trains.removeAll(keepCapacity: false)
             if let remoteTrains = responseObject as? NSArray
             {
@@ -87,9 +80,12 @@ class TrainListViewController: UITableViewController, UISplitViewControllerDeleg
                 }
             }
             self.tableView.reloadSections(NSIndexSet(index: 0), withRowAnimation: UITableViewRowAnimation.Automatic)
-            }, failure: nil)
-        
-        operation.start()
+            }, failure:{(operation:AFHTTPRequestOperation?, error:NSError?) -> Void in
+                if let err = error
+                {
+                    println("\(err)")
+                }
+            })
     }
     // #pragma mark - Table view data source
 
