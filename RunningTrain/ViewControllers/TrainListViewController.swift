@@ -61,21 +61,7 @@ class TrainListViewController: UITableViewController, UISplitViewControllerDeleg
                 for poopTrain : AnyObject in remoteTrains
                 {
                     let trainDic = poopTrain as NSDictionary
-                    let szService = trainDic["service"] as NSString
-                    let szTrainNo = trainDic["trainno"] as NSString
-                    let szSource = trainDic["SOURCE"] as NSString
-                    let szDest = trainDic["dest"] as NSString
-                    let szFullName = "\(szService) train \(szTrainNo) from \(szSource) to \(szDest)";
-                    let tempTrain = Train(name: szFullName, routes: [])
-                    let timeWhatever = trainDic["late"] as Int
-                    if timeWhatever < 0
-                    {
-                        tempTrain.status = .Early(-timeWhatever)
-                    }
-                    else if timeWhatever > 0
-                    {
-                        tempTrain.status = .Late(timeWhatever)
-                    }
+                    let tempTrain = Train(septaData: trainDic)
                     self.trains.append(tempTrain)
                 }
             }
